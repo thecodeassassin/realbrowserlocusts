@@ -2,7 +2,7 @@
 """ Combine Locust with Selenium Web Driver """
 import logging
 from os import getenv as os_getenv
-from locust import Locust
+from locust import User
 from locust.exception import LocustError
 from selenium import webdriver
 from realbrowserlocusts.core import RealBrowserClient
@@ -10,7 +10,7 @@ from realbrowserlocusts.core import RealBrowserClient
 _LOGGER = logging.getLogger(__name__)
 
 
-class RealBrowserLocust(Locust):
+class RealBrowserLocust(User):
     """
     This is the abstract Locust class which should be subclassed.
     """
